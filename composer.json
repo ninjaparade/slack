@@ -18,7 +18,7 @@
 		"php": ">=5.4.0",
 		"cartalyst/composer-installers": "1.2.*",
 		"illuminate/support": "4.2.*",
-		"platform/foundation": "1.0.*",
+		"platform/foundation": "2.0.*",
 		"guzzlehttp/guzzle": "~5.0"
 	},
 	"autoload": {
