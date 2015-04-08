@@ -9,7 +9,7 @@ class EventServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-	
+		$this->app['events']->subscribe('ninjaparade.slack.slackevents.handler.event');
 	}
 
 	/**
@@ -19,8 +19,6 @@ class EventServiceProvider extends ServiceProvider {
 	{
 		// Register the event handler
 		$this->bindIf('ninjaparade.slack.slackevents.handler.event', 'Ninjaparade\Slack\Handlers\Events\EventHandler');
-
-		
 	}
 
 }

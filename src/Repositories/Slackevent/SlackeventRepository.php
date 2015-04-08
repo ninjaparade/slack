@@ -68,11 +68,20 @@ class SlackeventRepository implements SlackeventRepositoryInterface {
 	 */
 	public function find($id)
 	{
-		$this->fireEvent('ninjaparade.test.event');
-		die;
 		return $this->container['cache']->rememberForever('ninjaparade.slack.slackevent.'.$id, function() use ($id)
 		{
 			return $this->createModel()->find($id);
+		});
+	}
+
+	/**
+	 * {@inheritDoc}
+	 */
+	public function findByName($name)
+	{
+		return $this->container['cache']->rememberForever('ninjaparade.slack.slackevent.name.'.$name, function() use ($name)
+		{
+			return $this->createModel()->where(['name' => $name])->first();
 		});
 	}
 

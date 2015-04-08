@@ -73,6 +73,8 @@ class SlackeventEventHandler extends BaseEventHandler implements SlackeventEvent
 		$this->app['cache']->forget('ninjaparade.slack.slackevent.active');
 
 		$this->app['cache']->forget('ninjaparade.slack.slackevent.'.$slackevent->id);
+
+		$this->app['cache']->forget('ninjaparade.slack.slackevent.name.'.$slackevent->name);
 	}
 
 }

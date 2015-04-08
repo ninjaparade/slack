@@ -25,7 +25,15 @@ interface SlackeventRepositoryInterface {
 	public function find($id);
 
 	/**
-	 * Returns a slack entry by its primary key.
+	 * Returns a slack entry by its name.
+	 *
+	 * @param  int  $id
+	 * @return \Ninjaparade\Slack\Models\Slackevent
+	 */
+	public function findByName($name);
+
+	/**
+	 * Returns a slack entry by its active setting
 	 *
 	 * 
 	 * @return \Ninjaparade\Slack\Models\Slackevent
