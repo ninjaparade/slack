@@ -127,6 +127,7 @@ return [
 
 		'Ninjaparade\Slack\Providers\SlackchannelServiceProvider',
 		'Ninjaparade\Slack\Providers\SlackeventServiceProvider',
+		'Ninjaparade\Slack\Providers\SlackClientServiceProvider',
 		'Ninjaparade\Slack\Providers\EventServiceProvider',
 
 	],
