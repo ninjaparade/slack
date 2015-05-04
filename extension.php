@@ -180,6 +180,11 @@ return [
 
 			Route::delete('{id}', ['as' => 'admin.ninjaparade.slack.slackevents.delete', 'uses' => 'SlackeventsController@delete']);
 		});
+
+		Route::group(['prefix'    => '/slack/slackevents','namespace' => 'Ninjaparade\Slack\Controllers\Frontend',], function()
+		{
+			Route::get('/' , ['as' => 'admin.ninjaparade.slack.slackevents.all', 'uses' => 'SlackeventsController@index']);
+		});
 	},
 
 	/*
